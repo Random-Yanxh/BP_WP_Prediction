@@ -20,9 +20,9 @@ EPOCHS = 300                # 训练轮数
 WINDOW_SIZE = 96            # 滑动窗口大小（用多少个历史数据点来预测）
 
 # 特征选择参数
-ENABLE_FEATURE_SELECTION = True    # 是否启用特征选择 True / False
+ENABLE_FEATURE_SELECTION = False    # 是否启用特征选择 True / False
 SELECTED_FEATURES_COUNT = 16       # 选择多少个最重要的特征
-CORRELATION_METHOD = 'spearman'     # 相关性计算方法，可选 pearson, kendall, spearman 
+CORRELATION_METHOD = 'kendall'     # 相关性计算方法，可选 pearson, kendall, spearman 
 
 # 文件路径配置
 TRAIN_FILE_PATH = r'./train.xlsx'  # 训练数据文件路径

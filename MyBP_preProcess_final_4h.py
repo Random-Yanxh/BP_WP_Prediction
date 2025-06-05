@@ -15,14 +15,14 @@ TARGET_FORECAST_STEP = 16    # 提前预测步数（1步 = 15分钟）
 # 神经网络结构参数
 NETWORK_SHAPE = [None, 128,32, PREDICTION_STEPS]  # 网络层数和每层神经元数量
 BATCH_SIZE = 16             # 每批训练的样本数量
-LEARNING_RATE = 0.003       # 学习率（控制参数更新的步长）
-EPOCHS = 150                # 训练轮数
+LEARNING_RATE = 0.001       # 学习率（控制参数更新的步长）
+EPOCHS = 600                # 训练轮数
 WINDOW_SIZE = 96            # 滑动窗口大小（用多少个历史数据点来预测）
 
 # 特征选择参数
-ENABLE_FEATURE_SELECTION = True    # 是否启用特征选择 True / False
-SELECTED_FEATURES_COUNT = 16       # 选择多少个最重要的特征
-CORRELATION_METHOD = 'kendall'     # 相关性计算方法，可选 pearson, kendall, spearman 
+ENABLE_FEATURE_SELECTION = False    # 是否启用特征选择 True / False
+SELECTED_FEATURES_COUNT = 32       # 选择多少个最重要的特征
+CORRELATION_METHOD = 'spearman'     # 相关性计算方法，可选 pearson, kendall, spearman 
 
 # 文件路径配置
 TRAIN_FILE_PATH = r'./train.xlsx'  # 训练数据文件路径
